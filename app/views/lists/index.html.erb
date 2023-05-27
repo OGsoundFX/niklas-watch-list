@@ -1,0 +1,12 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img5.goodfon.com/original/4112x2658/c/af/sssssss-aaaaaaaaaaa-ddddddddd-fffffffff-rrrrrrr.jpg)">
+  Lists
+</div>
+<h3> <%= link_to 'NEW LIST', new_list_path  %></h3>
+<br>
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://pic.onlinewebfonts.com/svg/img_179419.png)">
+      <%= link_to list.name, list_path(list)  %>
+    </div>
+  <% end %>
+</div>

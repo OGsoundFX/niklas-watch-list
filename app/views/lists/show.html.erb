@@ -1,0 +1,17 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img5.goodfon.com/original/4112x2658/c/af/sssssss-aaaaaaaaaaa-ddddddddd-fffffffff-rrrrrrr.jpg)">
+  <%= @list.name %>
+</div>
+<br>
+<h3> <%= link_to 'NEW BOOKMARK', new_list_bookmark_path(params[:id])  %></h3>
+<div >
+<% @list.movies.each do |movie| %>
+  <div class="card-category-mov" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url %>)">
+  </div>
+  <div>
+    <h3> <%= link_to movie.title, list_movie_path(@list, movie.id) %></h3>
+    <p><%= movie.overview %> </p>
+    <p>Rating:<%= movie.rating %> </p>
+    <%# link_to 'Delete Bookmark', list_movie_path(movie.id) %>
+  </div>
+  <% end %>
+</div>

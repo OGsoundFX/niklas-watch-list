@@ -1,0 +1,13 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img5.goodfon.com/original/4112x2658/c/af/sssssss-aaaaaaaaaaa-ddddddddd-fffffffff-rrrrrrr.jpg)">
+  Movies
+</div>
+<br>
+
+<div class="cards">
+<% @movies.each do |movie| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url %>)">
+    <%= link_to movie.title, movie_path(movie)  %>
+  </div>
+  <% end %>
+</div>
+</p>
