@@ -86,6 +86,6 @@ test:
 production:
   <<: *default
   database: rails_watch_list_niklas_production
-  username: rails_watch_list
+  username: niklas_watch_list # this has to be similar to 
   password: <%= ENV['RAILS_WATCH_LIST_DATABASE_PASSWORD'] %>
   
