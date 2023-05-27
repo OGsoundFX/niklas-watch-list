@@ -1,6 +1,5 @@
 databases:
   - name: niklas-watch-list
-    user: og
     plan: free
 
 services:

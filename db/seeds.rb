@@ -1,3 +1,6 @@
+require "open-uri"
+require "json"
+
 Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
