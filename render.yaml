@@ -1,18 +1,18 @@
 databases:
-  - name: watchlist
-    databaseName: watchlist
-    user: nk
+  - name: niklas-watch-list
+    user: og
+    plan: free
 
 services:
   - type: web
-    name: watch-list
+    name: niklas-watch-list # name has to match name on render?
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: DATABASE_URL
+      - key: DATABASE_URL # needs to macth the environment variable key to match the DB ?
         fromDatabase:
-          name: watch-list
+          name: niklas-watch-list # has to match the name of the DB ?
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: RAILS_MASTER_KEY # has to match the environment variable key set in the web config ?
         sync: false
