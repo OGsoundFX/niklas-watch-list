@@ -79,13 +79,10 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-# production:
-#   <<: *default
-#   url: <%= ENV['DATABASE_URL'] %>
 
 production:
   <<: *default
   database: rails_watch_list_niklas_production
-  username: niklas_watch_list # this has to be similar to 
+  username: niklas_watch_list
   password: <%= ENV['RAILS_WATCH_LIST_DATABASE_PASSWORD'] %>
-  
+  url: <%= ENV['DATABASE_URL'] %>
