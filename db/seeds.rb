@@ -1,6 +1,7 @@
 require "open-uri"
 require "json"
 
+puts "destroying everything"
 Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
@@ -24,3 +25,5 @@ end
 
 List.create(name: "Classics_vol1")
 List.create(name: "Classics_vol2")
+
+puts "created #{List.count} lists"
